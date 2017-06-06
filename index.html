@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Gabriel Genois</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+   integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+   crossorigin=""/>
+    </head>
+    <body onload="document.body.style.opacity='1'">
+        <a href="https://gestion.genois.me/" id="clientLink">
+            Accès client
+        </a>
+        <div id="centerPanel">
+            <div style="padding: 50px">
+            <h1><span style="color:#d9d9d9;">Gabriel</span> Genois</h1>
+            <h2>je <span id="display">Programmeur Web</span></h2>
+        <p class="mailLink">Me joindre via   
+            <a href="mailto:gabriel.genois@gmail.com">Couriel</a>
+            ou via <code>ricochet:sdcsztmclezq65bm</code>
+        </p>
+        <p class="linkBank">
+            <a href="https://github.com/dfstorm">Github</a>, 
+            <a href="https://ca.linkedin.com/in/gabrielgenois">LinkedIn</a>, 
+            <a href="https://mastodon.social/@gabrielg">Mastodon</a>, 
+            
+            
+        </p>
+         
+         
+            </div>
+        </div>
+        <div id="map"></div>
+        <script src="typed.js"></script>
+         <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+   crossorigin=""></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+      Typed.new('#display', {
+        strings: [
+            "<span style='color:#8a4ebf;'>^1000 développe des Applications PHP^2000</span>",
+            "<span style='color:#da4d45;'>déploie et gère des serveurs Web^2000</span>",
+            "<span style='color:#fbd25d;'>donne des conseils en sécurité^2000</span>",
+            "<span style='color:#fff;'>suis programmeur Web sénior</span>"],
+        typeSpeed: 80,
+        loop: false,
+        cursorChar: "&#9646;",
+        contentType: 'html'
+      });
+      
+      var map = L.map('map').setView([46.8140088, -71.2146441], 11);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ2FicmllbGdlbm9pcyIsImEiOiJjaWVoOGt2bm0wMDk0c2ltMTZtYXRhdnp3In0.G0ry132zGySlLEtig2Q3OQ', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([46.8000000, -71.2146441]).addTo(map);
+   
+    
+  });
+</script>
+
+
+<div class="element"></div>
+    </body>
+    
+</html>
